@@ -12,7 +12,7 @@
 
 #include "philosophers.h"
 
-t_bool	ft_fill_data_struct(int argc, char **argv, t_data *data)
+int	ft_fill_data_struct(int argc, char **argv, t_data *data)
 {
 	if (!ft_check_arg(argc, argv))
 		return (0);
@@ -52,7 +52,7 @@ t_philo	*ft_fill_philo_struct(t_data *data)
 	return (philo);
 }
 
-t_bool	ft_init_fork_and_mutex(t_data *data)
+int	ft_init_fork_and_mutex(t_data *data)
 {
 	int	i;
 
@@ -74,7 +74,7 @@ t_bool	ft_init_fork_and_mutex(t_data *data)
 	return (1);
 }
 
-t_bool	ft_init_thread(t_data *data, t_philo *philo)
+int	ft_init_thread(t_data *data, t_philo *philo)
 {
 	int	i;
 

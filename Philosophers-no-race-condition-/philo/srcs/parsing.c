@@ -12,7 +12,7 @@
 
 #include "philosophers.h"
 
-t_bool	ft_check_input_value(int argc, char **argv, t_data *data)
+int	ft_check_input_value(int argc, char **argv, t_data *data)
 {
 	if ((data->nb_philo <= 0)
 		|| data->ttd <= 0 || data->tte <= 0 || data->tts <= 0)
@@ -28,7 +28,7 @@ t_bool	ft_check_input_value(int argc, char **argv, t_data *data)
 	return (1);
 }
 
-t_bool	ft_check_arg(int argc, char **argv)
+int	ft_check_arg(int argc, char **argv)
 {
 	int	i;
 	int	j;

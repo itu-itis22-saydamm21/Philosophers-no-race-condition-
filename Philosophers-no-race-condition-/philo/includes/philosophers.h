@@ -48,12 +48,6 @@
 # define CYAN "\033[0;36m"
 
 // ========================================================================= //
-//                                   Typedef                                 //
-// ========================================================================= //
-
-typedef int	t_bool;
-
-// ========================================================================= //
 //                                 Structure                                 //
 // ========================================================================= //
 
@@ -87,17 +81,17 @@ typedef struct s_philo
 // ========================================================================= //
 
 // Check if all parameters are only int, and if argc is valid
-t_bool	ft_check_arg(int argc, char **argv);
+int		ft_check_arg(int argc, char **argv);
 // Check if all parameters are not or less 0
-t_bool	ft_check_input_value(int argc, char **argv, t_data *data);
+int		ft_check_input_value(int argc, char **argv, t_data *data);
 // If input is valid, fill the data structure with value
-t_bool	ft_fill_data_struct(int argc, char **argv, t_data *data);
+int		ft_fill_data_struct(int argc, char **argv, t_data *data);
 // Init a mutex array called fork, in data strucutre, and other secondary mutex
-t_bool	ft_init_fork_and_mutex(t_data *data);
+int		ft_init_fork_and_mutex(t_data *data);
 // Create an array of t_philo, one per philo, with info about eatch philo inside
 t_philo	*ft_fill_philo_struct(t_data *data);
 // Creat a thread per philo, with ft_loop in function, and t_philo in params
-t_bool	ft_init_thread(t_data *data, t_philo *philo);
+int		ft_init_thread(t_data *data, t_philo *philo);
 
 // ========================================================================= //
 //                                About routine                              //
@@ -108,7 +102,7 @@ void	*ft_loop(t_philo *philo);
 // Function to call routine function
 void	ft_eat_and_more(t_philo *philo);
 // Check if all the philosophers have not eaten more times than the max
-t_bool	ft_check_max_eat(t_philo *philo);
+int		ft_check_max_eat(t_philo *philo);
 // Function to eat
 void	ft_eat(t_philo *philo);
 // Function to sleep
@@ -124,7 +118,7 @@ void	ft_lock_fork(t_philo *philo);
 // Function ton unlock fork
 void	ft_unlock_fork(t_philo *philo);
 // Function to check if a philo is die
-t_bool	ft_check_die(t_philo *philo);
+int		ft_check_die(t_philo *philo);
 // Function to usleep without sleep message, 50ms
 void	ft_usleep(t_philo *philo, long long time);
 

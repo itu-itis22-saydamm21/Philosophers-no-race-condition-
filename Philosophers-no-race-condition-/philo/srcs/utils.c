@@ -23,7 +23,7 @@ long	ft_get_time(void)
 	return (time);
 }
 
-t_bool	ft_check_max_eat(t_philo *philo)
+int	ft_check_max_eat(t_philo *philo)
 {
 	int	i;
 
@@ -65,7 +65,7 @@ void	ft_destroy(t_data *data)
 	pthread_mutex_destroy(&data->check_die);
 }
 
-t_bool	ft_check_die(t_philo *philo)
+int	ft_check_die(t_philo *philo)
 {
 	pthread_mutex_lock(&philo->data_ptr->check_die);
 	if (!philo->data_ptr->die)
